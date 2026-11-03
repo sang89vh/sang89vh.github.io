@@ -16,41 +16,106 @@
 <body>
 <main>
 <h1>ElizaAI Office Privacy Policy</h1>
-<p class="muted">Effective October 25, 2026 · Tiếng Việt bên dưới</p>
+<p class="muted">Effective November 2, 2026 · Applies to the Android app and the iOS / macOS apps · Tiếng Việt bên dưới</p>
 
-<h2>Summary</h2>
+<p>This page covers every platform. Jump to <a href="#android">Android</a>, <a href="#apple">iPhone, iPad and Mac</a> or <a href="#vi">Tiếng Việt</a>. The apps differ in how AI and purchases work, so each platform has its own section; a section applies only to its own platform.</p>
+
+<h2 id="android">Android app</h2>
+
+<h3>Summary</h3>
+<p>ElizaAI Office has no account and no developer server. We (the developer) do not receive your documents, scans, signatures, profile or AI requests. Your files stay on your device. The only data that leaves the app is described below: optional AI requests that you start with your own key, diagnostics sent by Google’s ML Kit components, and what Google Play itself handles for purchases.</p>
+
+<h3>Documents and scans</h3>
+<p>Documents are stored in the app’s private storage on your device, or opened in place from the location you choose through Android’s Storage Access Framework (for example Google Drive, OneDrive or Files). There is no sync service run by us. Photos are imported through the system Photo Picker, so the app does not ask for storage or photo-library permission. Scanning, text recognition (OCR), conversions, formula calculation and document editing run on your device.</p>
+<p>Android Auto Backup is enabled for the app, so Google may back up the app’s private files (including your library) to your own Google account according to your device’s backup settings. That backup belongs to you and Google; we cannot access it.</p>
+
+<h3>AI features</h3>
+<p>Each AI request is handled by the first of these that applies:</p>
+<ul>
+<li><strong>Deterministic</strong> — tables, formulas, translation rules and similar work are done by app code on the device. No model, no network.</li>
+<li><strong>On device</strong> — on supported phones the app uses Gemini Nano through Google’s ML Kit GenAI APIs (Android AICore). The text is processed on the device. Android may first download the feature’s model to the device.</li>
+<li><strong>Your own model</strong> — off by default. If you turn it on, accept the consent screen and enter your own API key, then for heavy tasks the app can send the text of the document you chose to Anthropic’s Messages API (api.anthropic.com), using your key and your account with that provider. Before each document, the app shows a confirmation with the model, the host and how many characters will be sent, and nothing is sent unless you say yes. Your key is stored encrypted with the Android Keystore. Turning on “On-device only” in Settings blocks this tier completely. We never see the key, the text or the answer, and we do not run a proxy. The provider’s own privacy policy governs what it does with the request.</li>
+<li><strong>None</strong> — if no tier is available, the feature explains why and nothing is sent.</li>
+</ul>
+<p>Every AI result is shown to you as a proposal that you accept or reject.</p>
+
+<h3>Google components that process or send data</h3>
+<ul>
+<li><strong>ML Kit</strong> (text recognition, document scanner, GenAI). Image and document content is processed on the device; the document scanner runs inside Google Play services on the device. According to Google’s ML Kit data disclosure, the ML Kit SDK also sends device and app information (manufacturer, model, OS version, package name and version), performance metrics (such as latency), API configuration and per-installation identifiers to Google over HTTPS for diagnostics. These are not intended to identify you and do not include your document content. See <a href="https://developers.google.com/ml-kit/android-data-disclosure">developers.google.com/ml-kit/android-data-disclosure</a>.</li>
+<li><strong>Google Play Billing</strong> handles purchases (see below).</li>
+</ul>
+
+<h3>Purchases</h3>
+<p>Subscriptions and the one-time lifetime purchase are processed by Google Play. We receive no card or payment details. The app asks Google Play which purchases your Google account owns each time it starts, and keeps a short-lived copy of the result on the device so it works offline. Cancel or manage subscriptions in Google Play (Payments &amp; subscriptions).</p>
+<p>The first 60 days are unlocked inside the app; after that, some features have a monthly free-use allowance. The start date and usage counters are kept only on your device, in the encrypted store, and are excluded from backup. Because of that, uninstalling and reinstalling the app starts a new free period on that device.</p>
+
+<h3>Signatures, profile and keys</h3>
+<p>Saved signatures, your autofill profile, your optional AI key, the purchase cache and the free-period data are stored encrypted with a key held in the Android Keystore. This store is excluded from cloud backup and device-to-device transfer, so it does not move to a new phone. Ordinary settings (for example whether you gave AI consent) can be restored by backup, but the key is not, so the optional AI tier stays unavailable until you enter a key again.</p>
+
+<h3>Analytics and ads</h3>
+<p>ElizaAI Office has no analytics SDK, no advertising and no tracking. Crash and performance data, if you have allowed it in Android, comes from Google Play’s Android vitals, which Google collects under its own policy.</p>
+
+<h3>Permissions</h3>
+<ul>
+<li><strong>Internet</strong> (INTERNET) and <strong>network state</strong> (ACCESS_NETWORK_STATE) — to send an AI request to your own model after your confirmation, and to know whether the device is online.</li>
+<li><strong>Billing</strong> (com.android.vending.BILLING) — to buy and restore Premium through Google Play.</li>
+<li><strong>AICore</strong> (com.google.android.apps.aicore.service.BIND_SERVICE) — to use Gemini Nano on the device.</li>
+<li><strong>Run at startup, wake lock, foreground service</strong> — added by Android libraries for background work and home-screen widgets (refreshing the Recent Documents widget, finishing saves). They do not collect data.</li>
+<li>Business cards are added to Contacts only through the system “New Contact” screen, which you confirm. The app has no contacts permission.</li>
+</ul>
+
+<h3>Children</h3>
+<p>ElizaAI Office is a general productivity app and is not directed to children.</p>
+
+<h3>Deleting your data</h3>
+<p>Uninstalling the app deletes its private files and the encrypted store from the device. Files you saved elsewhere through the Storage Access Framework stay where you saved them. To remove a Google backup, use Google’s backup settings. To remove anything sent to your AI provider, contact that provider.</p>
+
+<h3>Changes and contact</h3>
+<p>We will update this page and its date when the policy changes. Email <a href="mailto:sang89vh@icloud.com">sang89vh@icloud.com</a> · Phone +84356054323</p>
+
+<hr>
+
+<h2 id="apple">iPhone, iPad and Mac app</h2>
+<p class="muted">Effective October 25, 2026. This section applies to the App Store apps only.</p>
+<h3>Summary</h3>
 <p>ElizaAI Office has no account and no developer server. Your documents, scans, signatures and AI requests are not collected by us. The App Store privacy label is “Data Not Collected”.</p>
 
-<h2>Documents and scans</h2>
+<h3>Documents and scans</h3>
 <p>Files are stored on your device or, if you turn on iCloud Drive, in your own iCloud account. Text recognition (OCR), conversions, translation and document editing run on your device.</p>
 
-<h2>Apple Intelligence</h2>
+<h3>Apple Intelligence</h3>
 <p>On supported devices, AI features use Apple’s on-device model first. For longer documents they may use Apple Private Cloud Compute, which Apple operates without storing your data. You can turn on “On-device only” in Settings so AI never uses the network. ElizaAI Office does not send prompts or documents to any other provider.</p>
 
-<h2>Signatures and autofill profile</h2>
+<h3>Signatures and autofill profile</h3>
 <p>Saved signatures and your autofill profile are stored in the device Keychain, on this device only.</p>
 
-<h2>Purchases</h2>
+<h3>Purchases</h3>
 <p>Purchases are handled by Apple through the App Store. We receive no payment details.</p>
 
-<h2>Analytics</h2>
+<h3>Analytics</h3>
 <p>ElizaAI Office contains no analytics or tracking code. Apple may provide the developer aggregated App Store statistics under Apple’s own privacy policy.</p>
 
-<h2>Permissions</h2>
+<h3>Permissions</h3>
 <ul>
 <li>Camera — to scan paper documents into PDFs.</li>
 <li>Photos — to import photos as document pages.</li>
 <li>Business cards are added to Contacts only through the system’s “New Contact” screen, which you confirm.</li>
 </ul>
 
-<h2>Children</h2>
+<h3>Children</h3>
 <p>ElizaAI Office is a general productivity app and is not directed to children.</p>
 
-<h2>Contact</h2>
+<h3>Contact</h3>
 <p>Email <a href="mailto:sang89vh@icloud.com">sang89vh@icloud.com</a> · Phone +84356054323</p>
 
 <hr>
-<h1>Chính sách quyền riêng tư</h1>
+<h1 id="vi">Chính sách quyền riêng tư</h1>
+<h2>Android</h2>
+<p>ElizaAI Office không yêu cầu tài khoản và không có máy chủ của nhà phát triển. Chúng tôi không nhận tài liệu, bản quét, chữ ký, hồ sơ hay yêu cầu AI của bạn. Tài liệu nằm trong bộ nhớ riêng của ứng dụng hoặc ở nơi bạn chọn qua Storage Access Framework. Nhận dạng văn bản, quét, chuyển đổi và chỉnh sửa chạy trên thiết bị. Sao lưu tự động của Android có thể sao lưu tệp của ứng dụng vào tài khoản Google của bạn.</p>
+<p>AI: các phép tính xác định chạy trên thiết bị; trên máy hỗ trợ, Gemini Nano chạy trên thiết bị qua ML Kit GenAI. Mô hình riêng của bạn mặc định tắt: chỉ khi bạn bật, đồng ý và nhập khóa API của chính bạn thì văn bản tài liệu bạn chọn mới được gửi tới API Messages của Anthropic (api.anthropic.com), sau khi bạn xác nhận cho từng tài liệu. Bật “Chỉ trên thiết bị” sẽ chặn hoàn toàn. Khóa được mã hóa bằng Android Keystore.</p>
+<p>ML Kit của Google gửi thông tin chẩn đoán (thiết bị, phiên bản ứng dụng, hiệu năng, mã định danh theo từng lần cài đặt) tới Google qua HTTPS, không gồm nội dung tài liệu. Thanh toán do Google Play xử lý. Ngày bắt đầu 60 ngày miễn phí và bộ đếm được lưu mã hóa trên thiết bị, không sao lưu, nên gỡ và cài lại sẽ bắt đầu lại kỳ miễn phí. Không có quảng cáo hay theo dõi. Quyền: Máy ảnh, Internet, trạng thái mạng, Thanh toán Google Play, AICore.</p>
+<p>Liên hệ: <a href="mailto:sang89vh@icloud.com">sang89vh@icloud.com</a> · +84356054323</p>
+<h2>iPhone, iPad, Mac</h2>
 <p>ElizaAI Office không yêu cầu tài khoản và không có máy chủ của nhà phát triển. Chúng tôi không thu thập tài liệu, bản quét, chữ ký hay yêu cầu AI của bạn. Nhãn quyền riêng tư trên App Store là “Không thu thập dữ liệu”.</p>
 <p>Tài liệu được lưu trên thiết bị hoặc trong iCloud của chính bạn. Nhận dạng văn bản, chuyển đổi, dịch và chỉnh sửa chạy trên thiết bị. Tính năng AI dùng mô hình trên thiết bị của Apple trước, sau đó có thể dùng Private Cloud Compute của Apple; bạn có thể bật “Chỉ trên thiết bị” trong Cài đặt. Chữ ký và hồ sơ tự điền được lưu trong Keychain trên thiết bị này. Thanh toán do Apple xử lý.</p>
 <p>Liên hệ: <a href="mailto:sang89vh@icloud.com">sang89vh@icloud.com</a> · +84356054323</p>
